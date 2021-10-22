@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <title>Pedro Veloso - DoWhile 2021</title>
 
   <link rel="stylesheet" href="./style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
 
       </div>
 
-      <h1>Pedro Veloso</h1>
+      <h1 id="userName">Pedro Veloso</h1>
       <a href="https://github.com/pedrohveloso" target="_blank">
         <img src="./images/github.svg" alt="ícone github">
 
@@ -37,20 +38,20 @@
 
       <p>Desenvolvedor Front-end em formação</p>
 
-      <ul>
-        <li>
-          <a href="https://www.youtube.com/channel/UCntKz63z0XWnEuJvtFsJcGg" target="_blank">
+      <ul id="socialLinks">
+        <li class="youtube">
+          <a href="https://www.youtube.com/channel/UCntKz63z0XWnEuJvtFsJcGg/" target="_blank">
             <img src="./images/youtube.svg" alt="ícone youtube"></a>
         </li>
-        <li>
-          <a href="https://www.instagram.com/pedroassisveloso/" target="_blank">
+        <li class="instagram">
+          <a href="https://www.instagram.com/" target="_blank">
             <img src="./images/instagram.svg" alt="ícone instagram"></a>
         </li>
-        <li>
-          <a href="https://www.facebook.com/pedro.veloso.370" target="_blank">
+        <li class="facebook">
+          <a href="https://www.facebook.com/" target="_blank">
             <img src="./images/facebook.svg" alt="ícone facebook"></a>
         </li>
-        <li>
+        <li class="twitter">
           <a href="https://www.twitter.com" target="_blank">
             <img src="./images/twitter.svg" alt="ícone twitter"></a>
         </li>
@@ -59,6 +60,27 @@
 
 
   </main>
+
+  <script>
+    const linksSocialMedia = {
+      github: 'pedrohveloso',
+      youtube: 'UCntKz63z0XWnEuJvtFsJcGg',
+      instagram: 'pedroassisveloso',
+      facebook: 'pedro.veloso.370',
+      twitter: 'twitter'
+
+    }
+
+    function changeSocialMediaLinks() {
+      for (let li of socialLinks.children) {
+        const social = li.getAttribute('class')
+
+        li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+      }
+    }
+
+  </script>
+
 </body>
 
 </html>

@@ -18,7 +18,7 @@ body {
 }
 
 main {
-  background-image: url(./images/background.png);
+  background-image: url(images/background.png);
   width: 375px;
   height: 812px;
 }
@@ -36,6 +36,11 @@ main {
   margin: 11.5rem auto 0;
 
   position: relative;
+}
+
+.avatar:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in-out;
 }
 
 .avatar span {
@@ -72,6 +77,11 @@ a {
   align-items: center;
 }
 
+.container > a:hover {
+  transform: scale(1.2);
+  transition: 0.2s ease-in-out;
+}
+
 p {
   margin-top: 2rem;
 }
@@ -86,4 +96,9 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+ul > li:hover {
+  transform: scale(1.2);
+  transition: 0.2s;
 }
