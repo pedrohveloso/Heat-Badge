@@ -26,17 +26,17 @@
           <img src="./images/build.svg" alt="Selo Rocketseat">
         </span>
 
-        <img src="./images/avatar.jpg" alt="Foto pessoal">
+        <img id="userImage" src="./images/avatar.jpg" alt="Foto pessoal">
 
       </div>
 
-      <h1 id="userName">Pedro Veloso</h1>
-      <a href="https://github.com/pedrohveloso" target="_blank">
+      <h1 id="userName">Pedro Henrique Veloso Assis</h1>
+      <a id="userLink" href="https://github.com/" target="_blank">
         <img src="./images/github.svg" alt="ícone github">
 
-        pedrohveloso</a>
+        <span id="userLogin">Github</span></a>
 
-      <p>Desenvolvedor Front-end em formação</p>
+      <p id="userBio">Desenvolvedor Front-end em formação</p>
 
       <ul id="socialLinks">
         <li class="youtube">
@@ -61,25 +61,7 @@
 
   </main>
 
-  <script>
-    const linksSocialMedia = {
-      github: 'pedrohveloso',
-      youtube: 'UCntKz63z0XWnEuJvtFsJcGg',
-      instagram: 'pedroassisveloso',
-      facebook: 'pedro.veloso.370',
-      twitter: 'twitter'
-
-    }
-
-    function changeSocialMediaLinks() {
-      for (let li of socialLinks.children) {
-        const social = li.getAttribute('class')
-
-        li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-      }
-    }
-
-  </script>
+  <script src="/main.js"></script>
 
 </body>
 
