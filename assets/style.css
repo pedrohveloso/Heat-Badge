@@ -39,11 +39,6 @@ main {
   position: relative;
 }
 
-.avatar:hover {
-  transform: scale(1.2);
-  transition: 0.2s ease-in-out;
-}
-
 .avatar span {
   position: absolute;
   top: -15px;
@@ -78,11 +73,6 @@ a {
   align-items: center;
 }
 
-.container > a:hover {
-  transform: scale(1.2);
-  transition: 0.2s ease-in-out;
-}
-
 p {
   margin-top: 2rem;
 }
@@ -99,7 +89,51 @@ ul {
   justify-content: center;
 }
 
-ul > li:hover {
-  transform: scale(1.2);
-  transition: 0.2s;
+footer {
+  display: none;
+}
+
+@media (min-width: 820px) {
+  main {
+    background: url(./images/desktop-size.svg) no-repeat center/cover;
+    background-color: hsl(0, 0%, 10%);
+  }
+
+  .avatar > img {
+    width: 9rem;
+    height: 10.5rem;
+    object-fit: cover;
+  }
+
+  .avatar:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+  }
+
+  .container ul {
+    margin-top: 1.5rem;
+  }
+
+  .container > a:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+  }
+
+  ul > li:hover {
+    transform: scale(1.2);
+    transition: 0.2s;
+  }
+
+  footer {
+    display: flex;
+
+    height: 1rem;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    color: hsl(0, 0%, 10%);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
 }
